@@ -1,0 +1,81 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_PageLayout.cshtml";
+    ViewBag.Title = "Detailed Service Page";
+}
+
+@model WebApplication.Models.userData
+
+@{
+    var service = Model.service;
+    var services = Model.lastServices;
+    var servicesList = Model.services;
+
+    <div class="section padding_layout_1 service_list">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-12 service_blog margin_bottom_50">
+                            <div class="full">
+                                <div class="service_img"> <img class="img-responsive" src="@service.Image" alt="#" /> </div>
+                                <div class="service_cont">
+                                    <h3 class="service_head">@service.Name</h3>
+                                    <p>
+                                        @service.Description
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        @{
+                            foreach (var s in services)
+                            {
+                                <div class="col-md-6 service_blog margin_bottom_50">
+                                    <div class="full">
+                                        <div class="service_img"> <img class="img-responsive" src="@s.Image" alt="#" /> </div>
+                                        <div class="service_cont">
+                                            <h3 class="service_head">@s.Name</h3>
+                                            <p>@s.Description</p>
+                                            <div class="bt_cont"> @Html.ActionLink("View Service", "ServiceDetail", "Service", new { id = s.Id }, new { @class = "btn sqaure_bt" }) </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                    
+                </div>
+                <div class="col-md-3">
+                    <div class="side_bar">
+                        <div class="side_bar_blog">
+                            <h4>SEARCH</h4>
+                            <div class="side_bar_search">
+                                <div class="input-group stylish-input-group">
+                                    <input class="form-control" placeholder="Search" type="text">
+                                    <span class="input-group-addon">
+                                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side_bar_blog">
+                            <h4>OUR SERVICE</h4>
+                            <div class="categary">
+                                <ul>
+                                    @{
+                                        foreach (var serv in servicesList)
+                                        {
+                                            <li><a href="/Service/ServiceDetail/@serv.Id"><i class="fa fa-angle-right"></i>@serv.Name</a></li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

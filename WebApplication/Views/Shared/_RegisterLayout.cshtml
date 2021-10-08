@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Font-->
+    @Styles.Render("~/bundles/roboto/css")
+    @Styles.Render("~/bundles/font-awesome-5/css")
+    @Styles.Render("~/bundles/style/register/css")
+</head>
+<body class="form-v5">
+    @RenderBody()
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

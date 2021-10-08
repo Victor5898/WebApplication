@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title</title>
+    <!-- plugins:css -->
+    @Styles.Render("~/bundles/materialdesignicons/css")
+    @Styles.Render("~/bundles/base/css")
+    @Styles.Render("~/bundles/adminstyle/css")
+    @Styles.Render("~/bundles/select2/css")
+    @Styles.Render("~/bundles/bootstrap/select2/css")
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="/Content/assets/images/favicon.png" />
+</head>
+<body>
+    <div class="container-scroller">
+        @Html.Partial("Shared/_SideNavbar")
+        <div class="container-fluid page-body-wrapper">
+            @Html.Partial("Shared/_Navbar")
+            <div class="main-panel">
+                @RenderBody()
+                <footer class="footer">
+                    @Html.Partial("Shared/_Footer")
+                </footer>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundle/vendor/base/jquery/js")
+    @Scripts.Render("~/bundle/off-canvas/js")
+    @Scripts.Render("~/bundle/hoverable-collapse/js")
+    @Scripts.Render("~/bundle/misc/js")
+    @Scripts.Render("~/bundle/settings/js")
+    @Scripts.Render("~/bundle/todolist/js")
+    @Scripts.Render("~/bundle/file-upload/js")
+    @Scripts.Render("~/bundle/typehead/js")
+    @Scripts.Render("~/bundle/select2/js")
+</body>
+</html>

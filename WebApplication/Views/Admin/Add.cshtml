@@ -1,0 +1,170 @@
+﻿
+@{
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Add Page";
+}
+
+@model WebApplication.Models.adminData
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> Form elements </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Adaugarea unui nou serviciu</h4>
+                    <p class="card-description">Introduceti datele pentru serviciu si apasati "submit". </p>
+                    @Html.ValidationSummary(true)
+                    @using (Html.BeginForm("AddService", "Admin", FormMethod.Post, new { @id = "LoginForm", @class = "forms-sample" }))
+                    {
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Name, new { @for = "exampleInputName1" })
+                            @Html.TextBoxFor(m => m.Name, new
+                                        {
+                                            placeholder = "Numele",
+                                            id = "exampleInputName1",
+                                            @class = "form-control",
+                                            type = "text"
+                                        })
+                            @Html.ValidationMessageFor(m => m.Name)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Image)
+                            @Html.TextBoxFor(m => m.Image, new
+                                        {
+                                            name = "img[]",
+                                            @class = "file-upload-default",
+                                            type = "file"
+                                        })
+                            <div class="input-group col-xs-12">
+                                @Html.TextBoxFor(m => m.Image, new
+                                        {
+                                            name = "img[]",
+                                            @class = "form-control file-upload-info",
+                                            type = "text",
+                                            disabled = true,
+                                            placeholder = "Incarca imaginea"
+                                        })
+                                <span class="input-group-append">
+                                    <button class="file-upload-browse btn btn-primary" type="button">Incarca</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Description, new { @for = "exampleTextarea1" })
+                            @Html.TextAreaFor(m => m.Description, new
+                            {
+                                @class = "form-control",
+                                rows = "4",
+                                id = "exampleTextarea1"
+                            })
+                            @Html.ValidationMessageFor(m => m.Description)
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        <button class="btn btn-dark">Cancel</button>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Adaugarea unui nou administrator</h4>
+                    <p class="card-description"> Introduceti datele pentru administrator si apasati "submit". </p>
+                    @using (Html.BeginForm("AddAdministrator", "Admin", FormMethod.Post, new { @id = "LoginForm", @class = "forms-sample" }))
+                    {
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Username)
+                            @Html.TextBoxFor(m => m.Username, new
+                               {
+                                   placeholder = "Username Administrator",
+                                   @class = "form-control form-control-lg",
+                                   type = "text",
+                                   aria_label = "Username"
+                               })
+                            @Html.ValidationMessageFor(m => m.Username)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Email)
+                            @Html.TextBoxFor(m => m.Email, new
+                               {
+                                   placeholder = "Email Administrator",
+                                   @class = "form-control",
+                                   type = "text",
+                                   aria_label = "Email"
+                               })
+                            @Html.ValidationMessageFor(m => m.Email)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Password)
+                            @Html.TextBoxFor(m => m.Password, new
+                               {
+                                   placeholder = "Parola Administrator",
+                                   @class = "form-control",
+                                   type = "password",
+                                   aria_label = "Password"
+                               })
+                            @Html.ValidationMessageFor(m => m.Password)
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        <button class="btn btn-dark">Cancel</button>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Adaugarea unui nou lucrator</h4>
+                    <p class="card-description">Introduceti datele pentru lucrator si apasati "submit". </p>
+                    @using (Html.BeginForm("AddWorker", "Admin", FormMethod.Post, new { @id = "LoginForm", @class = "forms-sample" }))
+                    {
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Name)
+                            @Html.TextBoxFor(m => m.Name, new
+                                        {
+                                            placeholder = "Numele angajatului",
+                                            @class = "form-control form-control-lg",
+                                            type = "text",
+                                            aria_label = "Name"
+                                        })
+                            @Html.ValidationMessageFor(m => m.Name)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Image)
+                            @Html.TextBoxFor(m => m.Image, new
+                                {
+                                    name = "img[]",
+                                    @class = "file-upload-default",
+                                    type = "file"
+                                })
+                            <div class="input-group col-xs-12">
+                                @Html.TextBoxFor(m => m.Image, new
+                                    {
+                                        name = "img[]",
+                                        @class = "form-control file-upload-info",
+                                        type = "text",
+                                        disabled = true,
+                                        placeholder = "Incarca imaginea"
+                                    })
+                                <span class="input-group-append">
+                                    <button class="file-upload-browse btn btn-primary" type="button">Incarca</button>
+                                </span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        <button class="btn btn-dark">Cancel</button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

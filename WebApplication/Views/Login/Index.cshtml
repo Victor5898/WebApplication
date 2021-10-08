@@ -1,0 +1,104 @@
+﻿@{
+    Layout = "~/Views/Shared/_BlankLayout.cshtml";
+    ViewBag.Title = "Login Page";
+}
+
+@using System.Web.Optimization
+
+@model WebApplication.Models.userLogin
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            @Html.ValidationSummary(true)
+            @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @id = "LoginForm" }))
+            {
+                @Html.AntiForgeryToken();
+                <span class="login100-form-title p-b-26">
+                    Welcome
+                </span>
+                <span class="login100-form-title p-b-48">
+                    <i class="zmdi zmdi-font"></i>
+                </span>
+
+                <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
+                    @Html.TextBoxFor(m => m.Credential, new
+               {
+                   title = "Introduceti numele de utilizator",
+                   type = "text",
+                   name = "email",
+                   id = "username",
+                   @class = "input100",
+                   autocomplete = "off"
+               })
+                    <span class="focus-input100" data-placeholder="Credential"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Enter password">
+                    <span class="btn-show-pass">
+                        <i class="zmdi zmdi-eye"></i>
+                    </span>
+                    @Html.TextBoxFor(m => m.Password, new
+                    {
+                        title = "Introduceti parola",
+                        value = "",
+                        name = "pass",
+                        id = "password",
+                        type = "password",
+                        @class = "input100"
+                    })
+                    <span class="focus-input100" data-placeholder="Password"></span>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn">
+                            Login
+                        </button>
+                    </div>
+                </div>
+
+                <div class="text-center p-t-115">
+                    <span class="txt1">
+                        Don’t have an account?
+                    </span>
+
+                    <a class="txt2" href="#">
+                        Sign Up
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/validation/js")
+
+    <script type="text/javascript">
+        $(function () {
+
+            $("#LoginForm").validate({
+                rules: {
+                    Username: {
+                        required: true
+                    },
+                    Password: {
+                        required: true
+                    }
+                },
+                submitHandler: function (form) {
+                    form.submit();
+                },
+                errorPlacement: function (error, element) {
+                    $(element)
+                        .closest("form")
+                        .find("label[for='" + element.attr("id") + "']")
+                        .append(error);
+                },
+                errorElement: "span"
+            });
+        });
+    </script>
+}

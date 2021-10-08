@@ -1,0 +1,15 @@
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\bin\Debug\WebApplication.Domain.dll
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\bin\Debug\WebApplication.Domain.pdb
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\bin\Debug\WebApplication.Helper.dll
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\bin\Debug\WebApplication.Helper.pdb
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\obj\Debug\WebApplication.Domain.csprojAssemblyReference.cache
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\obj\Debug\WebApplication.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\obj\Debug\WebApplication.Domain.csproj.CopyComplete
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\obj\Debug\WebApplication.Domain.dll
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\obj\Debug\WebApplication.Domain.pdb
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\bin\Debug\WebApplication.Domain.dll.config
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\bin\Debug\WebApplication.Helper.dll.config
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Domain\bin\Debug\EntityFramework.SqlServer.xml

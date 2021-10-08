@@ -1,0 +1,29 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_PageLayout.cshtml";
+    ViewBag.Title = "Service Page";
+}
+
+@model WebApplication.Models.userData
+
+<div class="section padding_layout_1 service_list">
+    <div class="container">
+        <div class="row">
+            @{
+                var service = Model.services;
+                foreach (var s in service)
+                {
+                    <div class="col-md-4 service_blog margin_bottom_50">
+                        <div class="full">
+                            <div class="service_img"> <img class="img-responsive" src="@s.Image" alt="#" /> </div>
+                            <div class="service_cont">
+                                <h3 class="service_head">@s.Name</h3>
+                                <p>@s.Description</p>
+                                <div class="bt_cont"> @Html.ActionLink("View Service", "ServiceDetail", "Service", new { id = s.Id }, new { @class = "btn sqaure_bt" }) </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

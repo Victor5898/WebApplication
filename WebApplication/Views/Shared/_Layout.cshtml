@@ -1,0 +1,66 @@
+﻿@{
+    Layout = null;
+}
+
+@using System.Web.Optimization
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>@ViewBag.Title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    @Styles.Render("~/bundles/bootstrap/css")
+    @Styles.Render("~/bundles/responsive/css")
+    @Styles.Render("~/bundles/colors1/css")
+    @Styles.Render("~/bundles/custom/css")
+    @Styles.Render("~/bundles/animate/css")
+    @Styles.Render("~/bundles/revolution/settings/css")
+    @Styles.Render("~/bundles/revolution/layers/css")
+    @Styles.Render("~/bundles/revolution/navigation/css")
+
+    @if (IsSectionDefined("Styles"))
+    {
+        @RenderSection("Styles", required: false)
+    }
+
+    @Styles.Render("~/bundles/style/css")
+
+</head>
+<body id="default_theme" class="it_service">
+    <!-- loader -->
+    <div class="bg_load"> <img class="loader_animation" src="images/loaders/loader_1.png" alt="#" /> </div>
+    <header id="default_header" class="header_style_1">
+        @Html.Partial("_Header")
+        @Html.Partial("_Navigation")
+    </header>
+    @RenderBody()
+    @Html.Partial("_Footer")
+    @Scripts.Render("~/bundle/jquery/js")
+    @Scripts.Render("~/bundle/bootstrap/js")
+    @Scripts.Render("~/bundle/menumaker/js")
+    @Scripts.Render("~/bundle/wow/js")
+    @Scripts.Render("~/bundle/custom/js")
+    @Scripts.Render("~/bundle/revolution/themepunch/tools/js")
+    @Scripts.Render("~/bundle/revolution/themepunch/revolution/js")
+    @Scripts.Render("~/bundle/revolution/actions/js")
+    @Scripts.Render("~/bundle/revolution/carousel/js")
+    @Scripts.Render("~/bundle/revolution/kenburn/js")
+    @Scripts.Render("~/bundle/revolution/layeranimation/js")
+    @Scripts.Render("~/bundle/revolution/migration/js")
+    @Scripts.Render("~/bundle/brevolution/navigation/js")
+    @Scripts.Render("~/bundle/revolution/parallax/js")
+    @Scripts.Render("~/bundle/revolution/slideanims/js")
+    @Scripts.Render("~/bundle/revolution/video/js")
+</body>
+</html>

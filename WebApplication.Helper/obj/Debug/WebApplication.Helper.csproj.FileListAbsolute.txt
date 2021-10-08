@@ -1,0 +1,12 @@
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Helper\bin\Debug\WebApplication.Helper.dll
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Helper\bin\Debug\WebApplication.Helper.pdb
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Helper\obj\Debug\WebApplication.Helper.csprojAssemblyReference.cache
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Helper\obj\Debug\WebApplication.Helper.csproj.CoreCompileInputs.cache
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Helper\obj\Debug\WebApplication.Helper.dll
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Helper\obj\Debug\WebApplication.Helper.pdb
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Helper\bin\Debug\WebApplication.Helper.dll.config
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Helper\bin\Debug\EntityFramework.dll
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Helper\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Helper\bin\Debug\EntityFramework.xml
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Helper\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Victor\source\repos\WebApplication\WebApplication.Helper\obj\Debug\WebApplication.Helper.csproj.CopyComplete
